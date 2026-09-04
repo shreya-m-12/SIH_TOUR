@@ -1,0 +1,6 @@
+{
+  "name": "LocalRoots",
+  "description": "Travel and local-discovery platform powered by verified locals and an AI companion grounded strictly in authentic local knowledge.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
