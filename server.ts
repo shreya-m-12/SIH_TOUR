@@ -7,7 +7,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
+const HOST = process.env.HOST || "0.0.0.0";
 
 app.use(express.json({ limit: "5mb" }));
 
@@ -307,8 +308,8 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`LocalRoots server running on http://0.0.0.0:${PORT}`);
+  app.listen(PORT, HOST, () => {
+    console.log(`LocalRoots server running on http://${HOST}:${PORT}`);
   });
 }
 
